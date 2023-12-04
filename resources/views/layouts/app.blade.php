@@ -13,6 +13,8 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
+        @include('layouts.navigation')
+
         @if (session()->has('error'))
             <x-notification
                 :message="session('error')"
@@ -22,14 +24,12 @@
         @endif
 
         @if (session()->has('success'))
-            <x-notification
+            <x-notifgication
                 :message="session('success')"
                 title="Success!"
                 type="success"
             />
         @endif
-
-        @include('layouts.navigation')
 
         <div class="min-h-screen bg-gray-100">
             <main>
