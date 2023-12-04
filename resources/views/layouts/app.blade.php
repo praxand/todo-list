@@ -24,7 +24,7 @@
         @endif
 
         @if (session()->has('success'))
-            <x-notifgication
+            <x-notification
                 :message="session('success')"
                 title="Success!"
                 type="success"
